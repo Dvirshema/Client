@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinya: דף הבית</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="HomePage.css">
+    <script src="HomePage.js"></script>
+    <script src="ajaxCalls.js"></script>
+    
+  </head>
+  <body>
+    <div class="home-div">
+    <header>
+        <div class="logo">
+            <img src="https://www.infinya.co.il/wp-content/uploads/Group-712.svg" alt="logo">
+        </div>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+             <li><a href="#" class="active" onclick="changeColor(this)">דף הבית</a></li>
+             <li><a href="#" onclick="changeColor(this)">דיווח ייצור</a></li>
+             <li><a href="#" onclick="changeColor(this)">תוכנית ייצור</a></li>
+             <li class="dropdown">
+                <a href="#" class="dropbtn">דוחות ▼</a>
+                <div class="dropdown-content">
+                    <a href="#">הפקת דוחות</a>
+                    <a href="#">המלצות מערכת</a>
+                </div>
+            </li>
+             <li><a href="StockPageAdmin.html" onclick="changeColor(this)">מלאי</a></li>
+             <li><a href="#" onclick="changeColor(this)">מוצרים ומתכונים</a></li>
+             <li><a href="EmployeeAdmin.html" onclick="changeColor(this)">עובדים</a></li>
+           </ul>
+        </nav>
+        <div class="user">
+          <a href="EditDetailsPage.html" id="EmpName"></a>
+          </div>
+      </header>
+      <h1>ברוכים הבאים למערכת לניהול תנועות<br>באלות פסולת קרטון</h1>
+    </div>
+    <div class="slogan-links-home">
+        <div class="slogan-home">
+          <h4>לוקחים את הייצור שלך לשלב הבא - <br>
+            נתונים בזמן אמת, פתרונות בזמן אמת
+          </h4>
+        </div>
+        <div class="row">
+                <a href="#" class="btn-icon">
+               <img src="https://www.infinya.co.il/wp-content/uploads/Group-452-1.png" alt="">
+    <span>להפקת דוחות</span>
+    </a>
+                <a href="#" class="btn-icon">
+    <img src="https://www.infinya.co.il/wp-content/uploads/Group-454-1.png" alt="">
+    <span>להמלצות המערכת</span>
+    </a>
+                <a href="StockPageAdmin.html" class="btn-icon">
+    <img src="https://www.infinya.co.il/wp-content/uploads/Group-453-1.png" alt="">
+    <span>למלאי</span>
+    </a>
+        </div>
+    </div>
+    <div class="bulletin-board">
+      <div class="bulletin-header">
+        <h2>
+          לוח מודעות
+        </h2>
+        <img src="images/plus-icon.jpeg" alt="Add message" onclick="showMessageForm()">
+      </div>
+      <div class="bulletin-body">
+      
+      </div>
+    </div> 
+    <div id="message-form" class="w3-modal">
+      <div class="w3-modal-content">
+        <header class="w3-container w3-teal">
+          <span onclick="hideMessageForm()" class="w3-button w3-display-topright">&times;</span>
+          <h2>פרסם הודעה חדשה</h2>
+        </header>
+        <div class="w3-container">
+          <form onsubmit="submitMessage(event)">
+            <textarea name="message" rows="5" required></textarea>
+            <br>
+            <button type="submit">פרסם</button>
+          </form>
+        </div>
+      </div>
+    </div>   
+  </body>
+</html>
